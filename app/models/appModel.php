@@ -4,27 +4,28 @@ namespace app\models;
 
 abstract class appModel extends \ActiveRecord\Model implements \app\interfaces\iSql{
 
-	public function listar(){
+	public static function listar(){
 		return parent::find('all');
 	}
 
-	public function cadastrar($attributes){
+	public static function cadastrar($attributes){
 		$cadastrar = parent::create($attributes);
 		return $cadastrar;
 	}
 
-	public function atualizar($id,$attributes){
+	public static function atualizar($id,$attributes){
 		$atualizar = parent::find($id);
 		$atualizar->update_attributes($attributes);
 	}
 
-	public function deletar($id){
+	public static function deletar($id){
 		$deletar = parent::find($id);
 		$deletar->delete();
 	}
 
-	public function pegarPeloId($id){
-		
-	}
+	public static function pegarPeloId($campo, $valor, $tipo = null) {
+    $tipoListagem = ($tipo == null) ? 'first' : 'all';
+    return parent::find($tipoListagem, array('conditions' => array($campo . '=?', $valor)));
+  }
 
 }

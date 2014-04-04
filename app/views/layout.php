@@ -8,6 +8,10 @@
 
     </head>
     <body>
+        <div id="menu">
+          <?php echo $menu; ?>
+        </div>
+
         <div id="conteudo">
         	<?php require $pagina.'.php'; ?>
         </div>
