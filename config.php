@@ -7,6 +7,7 @@ require ROOT.'connection.php';
 require ROOT.'functions/functions.php';
 
 \app\classes\session::sessionStart();
+\app\classes\session::criarSessao(array('nome' => 'cursos', 'valor' => 'lojaVirtual'));
 
 $app = new \Slim\Slim(array(
 	'debug' => true,

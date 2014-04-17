@@ -1,15 +1,17 @@
 <?php
 
 namespace app\classes;
+use \app\interfaces\iCarrinho;
 
-use \app\interfaces\iCarrinho as interfaceCarrinho;
 
-class carrinho implements interfaceCarrinho{
+class carrinho implements iCarrinho{
 
 	private $sessionId;
+	private $debug;
 
 	public function __construct($sessionId){
 		$this->sessionId = $sessionId;
+
 		if(!isset($_SESSION[$sessionId]['carrinho'])){
 			$_SESSION[$sessionId]['carrinho'] = array();
 		}
@@ -26,8 +28,8 @@ class carrinho implements interfaceCarrinho{
 		}else{
 			$_SESSION[$this->sessionId]['carrinho'][$id]['qtde'] = 1;
 		}
-	}
 
+	}
 	public function atualizarCarrinho($id,$qtde){
 		if(isset($_SESSION[$this->sessionId]['carrinho'][$id])){
 			$_SESSION[$this->sessionId]['carrinho'][$id]['qtde'] = $qtde;
@@ -41,7 +43,7 @@ class carrinho implements interfaceCarrinho{
 	}
 
 	public function deletarCarrinho(){
-		unset($_SESSION[$this->sesssionId]['carrinho']);
+		unset($_SESSION[$this->sessionId]['carrinho']);
 	}
 
 	public function produtosCarrinho(){
@@ -51,9 +53,10 @@ class carrinho implements interfaceCarrinho{
 	}
 
 	public function debugCarrinho(){
-		$debug = '<pre>';
-		$debug.= $_SESSION[$this->sessionId]['carrinho'];
-		$debug.= '</pre>';
-		return $debug;
+		$this->debug = '<pre>';
+		$this->debug.= var_dump($_SESSION[$this->sessionId]['carrinho']);
+		$this->debug.= '</pre>';
+		return $this->debug;
 	}
+
 }

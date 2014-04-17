@@ -1,2 +1,20 @@
 body {padding-top: 0;}
-#conteudo{width: 980px;margin: 0 auto;font-family: "Arial"}
+#container{width: 980px;margin: 0 auto;font-family: "Carrois Gothic SC"}
+#menu{width: 200px;float: left;}
+#conteudo{width: 750px;float: right;}
+
+/*menu*/
+#menu ul{list-style: none;font-size: 18px;}
+#menu ul li a{color: blue;text-decoration: none}
+#menu ul li ul li#li-subcategoria a{text-decoration: none;color: blue;}
+
+/*listagem produtos*/
+.produtos{ width: 220px;float: left;display: block;margin-bottom: 20px;height: 200px;margin-right: 20px;}
+.produto-nome{color: blue;text-align: center;}
+.produto-preco{color: blue;text-align: center;font-size: 18px;}
+.produto-btn{text-align: center;}
+.produto-btn a{text-decoration: none;}
+
+/*detalhes*/
+#foto-produto{width: 300px;float: left;}
+#descricao-produto{width: 400px;float: right;}

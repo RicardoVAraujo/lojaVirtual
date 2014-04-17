@@ -7,5 +7,6 @@ interface iSql{
 	public static function listar();
 	public static function atualizar($id,$attributes);
 	public static function deletar($id);
-	public static function pegarPeloId($campo,$valor,$tipo);
+	public static function where($campo,$valor,$tipo);
 }
+

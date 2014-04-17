@@ -1,8 +1,7 @@
 <?php
 
-namespace app\models;
-use \app\models\appModel;
+ namespace app\models;
 
-class categoria extends appModel{
-  static $table_name = "tb_categorias";
-}
+ class categoria extends \app\models\appModel{
+ 	static $table_name = 'tb_categorias';
+ }

@@ -1,4 +1,4 @@
-<h2>Produtos em destaque</h2>
+<h2>Subcategoria: <?php echo $subcategoria->tb_subcategorias_nome; ?></h2>
 
 <?php if(count($produtos) == 0): ?>
 	Nenhum produto cadastrado para essa categoria

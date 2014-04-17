@@ -23,9 +23,9 @@ abstract class appModel extends \ActiveRecord\Model implements \app\interfaces\i
 		$deletar->delete();
 	}
 
-	public static function pegarPeloId($campo, $valor, $tipo = null) {
-    $tipoListagem = ($tipo == null) ? 'first' : 'all';
-    return parent::find($tipoListagem, array('conditions' => array($campo . '=?', $valor)));
-  }
+	public static function where($campo,$valor,$tipo=null){
+		$tipo = ($tipo == null) ? 'first' : 'all';
+		return parent::find($tipo, array('conditions' => array($campo.'=?',$valor)));
+	}
 
 }

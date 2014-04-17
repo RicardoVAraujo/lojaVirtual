@@ -1,9 +1,7 @@
 <?php
+ 
+ namespace app\models;
 
-namespace app\models;
-use \app\models\appModel;
-
-class subcategoria extends appModel
-{
-  static $table_name = "tb_subcategorias";
-}
+ class subcategoria extends \app\models\appModel{
+ 	static $table_name = 'tb_subcategorias';
+ }

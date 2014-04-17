@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1861d375808bf410038edc31a76ec16a",
+    "hash": "53e1f62918c13229322142279c79b279",
     "packages": [
         {
             "name": "pagseguro/php",
