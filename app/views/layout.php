@@ -11,7 +11,10 @@
     <body>
         <div id="container">
         <div id="menu"><?php echo $menu; ?></div>
+        <div id="ver-carrinho"><a href="/carrinho">Ver Carrinho</a></div>
         <div id="conteudo"><?php require $pagina.'.php'; ?></div>
         </div>
+        <script src="<?php echo site_url() ?>/public/js/jquery/jquery.js"></script>
+        <script src="<?php echo site_url() ?>/public/js/jquery/carrinho.js"></script>
     </body>
 </html>

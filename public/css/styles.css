@@ -2,6 +2,8 @@ body {padding-top: 0;}
 #container{width: 980px;margin: 0 auto;font-family: "Carrois Gothic SC"}
 #menu{width: 200px;float: left;}
 #conteudo{width: 750px;float: right;}
+#ver-carrinho{float: right;}
+#ver-carrinho a{text-decoration: none;color: blue;font-size: 18px;}
 
 /*menu*/
 #menu ul{list-style: none;font-size: 18px;}
